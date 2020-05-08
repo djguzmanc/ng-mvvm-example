@@ -1,0 +1,6 @@
+<div
+  *ngFor="let flight of flights$ | async"
+  [class.disabled]="flight.disabled">
+  {{ flight | json }}
+  <button (click)="flight.disabled = !flight.disabled">Toggle disabled</button>
+</div>
